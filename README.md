@@ -10,13 +10,13 @@ Flarum extension. Add a bottom tab to flarum on mobile.
 
 ### Installation / Update
 ```
-composer require itnt/flarum-backtop
+composer require itnt/flarum-uitab
 
 ```
 
 ### Remove
 ```
-composer remove itnt/flarum-backtop
+composer remove itnt/flarum-uitab
 ```
 
 ### Cache cleaning
@@ -34,9 +34,9 @@ php flarum cache:clear
 
 ### Links
   - [Flarum](https://discuss.flarum.org/d/)
-  - [Github](https://github.com/Littlegolden/uitab)
-  - [Packagist](https://packagist.org/packages/itnt/uitab)
-  - [Flagrow](https://flagrow.io/extensions/itnt/uitab)
+  - [Github](https://github.com/Littlegolden/flarum-uitab)
+  - [Packagist](https://packagist.org/packages/itnt/flarum-uitab)
+  - [Flagrow](https://flagrow.io/extensions/itnt/flarum-uitab)
 
 ### Donate
 Buy me a cup of coffee \^_\^

@@ -27,7 +27,7 @@
     "flarum-extension": {
       "title": "UI Tab ",
         "icon": {
-        "name": "fas fa-chevron-up",
+        "name": "fas fa-grip-horizontal",
         "background": "#f8504b",
         "color": "#fff"
       }
