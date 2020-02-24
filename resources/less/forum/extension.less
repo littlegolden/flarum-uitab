@@ -1,0 +1,69 @@
+/* 手机端底部导航栏 */
+.DiscussionList:not(.DiscussionList--searchResults) .read .DiscussionListItem-title {
+    color: #000 !important;
+}
+.ComposerBody-header h3 {
+    margin: 0;
+    line-height: 1.5em;
+    color: #000 !important;
+}
+.PollOption-active {
+    background-color: #49b4e6 !important;
+}
+@media(max-width: 500px) {
+    .mobile-app-icon-bar {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        background: none;
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        height: 48px;
+        z-index: 2;
+        /*border: 1px solid #fff !important;*/
+    }
+    /* addthis 上移，如果您的站点同时使用的 addthis 控件，此设置可以防止其挡住导航栏 */
+    .at-expanding-share-button[data-position=bottom-right] {
+        bottom: 58px !important;
+    }
+    .scroll-up {
+        bottom: 108px;
+    }
+}
+.buttonstyle.active {
+    color: #fff !important;
+}
+.buttonstyle {
+    width: 100%;
+    height: 100%;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    background: @config-primary-color;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+}
+.spanstyle {
+    font-size: 10px;
+    margin-top: 5px;
+}
+.mobile-app-icon-bar button {
+    padding: 0.75rem !important;
+    cursor: pointer;
+}
+.mobile-app-icon-bar button svg,
+.mobile-app-icon-bar button i,
+.mobile-app-icon-bar button img {}
+@media(min-width: 800px) {
+    .mobile-app-icon-bar {
+        display: none !important;
+    }
+}
