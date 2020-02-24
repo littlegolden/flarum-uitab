@@ -42,7 +42,7 @@ return [
 			    		<i class="fas fa-edit"></i>
 				    	<span class="spanstyle"></span>
 				</button></a>
-				<a href="/setting">
+				<a href="/settings">
 			    	<button class="buttonstyle">
 			    		<i class="fas fa-user-cog"></i>
 				    	<span class="spanstyle"></span>
