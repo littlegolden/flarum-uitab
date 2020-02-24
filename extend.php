@@ -21,7 +21,7 @@ use Flarum\Frontend\Document;
 
 return [
     (new Extend\Frontend('forum'))
-        ->css(__DIR__ . '/resources/less/forum.less')
+        ->css(__DIR__ . '/resources/less/forum.less'),
     (new Extend\Frontend('forum'))
         ->content(function (Document $document) {
             $document->foot[] = '
