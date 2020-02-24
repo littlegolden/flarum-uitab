@@ -28,15 +28,15 @@ return [
             $document->foot[] = '
             <!-- UI Tab -->
             <div class="mobile-app-icon-bar" id="myDIV">
-			    <button onclick="location.href='/'" class="buttonstyle"><i class="fa fa-home"></i>
+			    <button onclick="location.href='/'"><i class="fa fa-home"></i>
 				<span class="spanstyle"></span></button>
-			    <button onclick="location.href='/tags'" class="buttonstyle"><i class="fas fa-tags"></i>
+			    <button onclick="location.href='/tags'"><i class="fas fa-tags"></i>
 				    <span class="spanstyle"></span></button>
-			    <button class="buttonstyle" onclick="location.href='/composer'"><i class="fas fa-edit"></i>
+			    <buttononclick="location.href='/composer'"><i class="fas fa-edit"></i>
 				    <span class="spanstyle"></span></button>
-			    <button class="buttonstyle" onclick="location.href='/settings'"><i class="fas fa-user-cog"></i>
+			    <buttononclick="location.href='/settings'"><i class="fas fa-user-cog"></i>
 				    <span class="spanstyle"></span></button>
-			    <button class="buttonstyle" onclick="location.href='/notifications'"><i class="fas fa-bell"></i>
+			    <buttononclick="location.href='/notifications'"><i class="fas fa-bell"></i>
 				    <span class="spanstyle"></span></button>
 		    </div>
             ';
