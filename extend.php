@@ -22,22 +22,36 @@ use Flarum\Frontend\Document;
 return [
     (new Extend\Frontend('forum'))
         ->css(__DIR__ . '/resources/less/forum.less')
-        ->js(__DIR__.'/js/dist/forum.js'),
     (new Extend\Frontend('forum'))
         ->content(function (Document $document) {
             $document->foot[] = '
             <!-- UI Tab -->
             <div class="mobile-app-icon-bar" id="myDIV">
-			    <button onclick="location.href='/'"><i class="fa fa-home"></i>
-				<span class="spanstyle"></span></button>
-			    <button onclick="location.href='/tags'"><i class="fas fa-tags"></i>
-				    <span class="spanstyle"></span></button>
-			    <button onclick="location.href='/composer'"><i class="fas fa-edit"></i>
-				    <span class="spanstyle"></span></button>
-			    <button onclick="location.href='/settings'"><i class="fas fa-user-cog"></i>
-				    <span class="spanstyle"></span></button>
-			    <button onclick="location.href='/notifications'"><i class="fas fa-bell"></i>
-				    <span class="spanstyle"></span></button>
+            		<a href="/">
+			    	<button class="buttonstyle">
+			    		<i class="fa fa-home"></i>
+					<span class="spanstyle"></span>
+				</button></a>
+				<a href="/tags">
+			    	<button class="buttonstyle">
+			    		<i class="fas fa-tags"></i>
+				    	<span class="spanstyle"></span>
+				</button></a>
+				<a href="/composer">
+			    	<button class="buttonstyle">
+			    		<i class="fas fa-edit"></i>
+				    	<span class="spanstyle"></span>
+				</button></a>
+				<a href="/setting">
+			    	<button class="buttonstyle">
+			    		<i class="fas fa-user-cog"></i>
+				    	<span class="spanstyle"></span>
+				</button></a>
+				<a href="/notifications">
+			    	<button class="buttonstyle">
+			    		<i class="fas fa-bell"></i>
+				    	<span class="spanstyle"></span>
+				</button></a>
 		    </div>
             ';
         })
