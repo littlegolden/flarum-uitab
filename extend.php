@@ -21,8 +21,9 @@ use Flarum\Frontend\Document;
 
 return [
     (new Extend\Frontend('forum'))
-        ->css(__DIR__ . '/resources/less/forum.less'),
-        ->js(__DIR__.'/resources/js/dist/forum.js'),
+        ->css(__DIR__ . '/resources/less/forum.less')
+        ->js(__DIR__.'/js/dist/forum.js'),
+    (new Extend\Frontend('forum'))
         ->content(function (Document $document) {
             $document->foot[] = '
             <!-- UI Tab -->
