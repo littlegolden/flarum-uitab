@@ -32,11 +32,11 @@ return [
 				<span class="spanstyle"></span></button>
 			    <button onclick="location.href='/tags'" class="buttonstyle"><i class="fas fa-tags"></i>
 				    <span class="spanstyle"></span></button>
-			    <button onclick="location.href='/composer'" class="buttonstyle"><i class="fas fa-edit"></i>
+			    <button class="buttonstyle" onclick="location.href='/composer'"><i class="fas fa-edit"></i>
 				    <span class="spanstyle"></span></button>
-			    <button onclick="location.href='/settings'" class="buttonstyle"><i class="fas fa-user-cog"></i>
+			    <button class="buttonstyle" onclick="location.href='/settings'"><i class="fas fa-user-cog"></i>
 				    <span class="spanstyle"></span></button>
-			    <button onclick="location.href='/notifications'" class="buttonstyle"><i class="fas fa-bell"></i>
+			    <button class="buttonstyle" onclick="location.href='/notifications'"><i class="fas fa-bell"></i>
 				    <span class="spanstyle"></span></button>
 		    </div>
             ';
