@@ -18,7 +18,6 @@ namespace itnt\uiTab;
 
 use Flarum\Extend;
 use Flarum\Frontend\Document;
-use Illuminate\Support\Facades\Auth;
 
 return [
     (new Extend\Frontend('forum'))
@@ -44,8 +43,8 @@ return [
 			    	<button class="buttonstyle">
 			    		<i class="fas fa-edit"></i>
 				    	<span class="spanstyle"></span>
-				</button></a>'.
-                ($userId  ? '<a href="/settings">
+				</button></a>'
+                . ($userId  ? '<a href="/settings">
 			    	<button class="buttonstyle">
 			    		<i class="fas fa-user-cog"></i>
 				    	<span class="spanstyle"></span>
@@ -54,8 +53,8 @@ return [
 			    	<button class="buttonstyle">
 			    		<i class="fas fa-bell"></i>
 				    	<span class="spanstyle"></span>
-				</button></a>' : '').
-                '</div>
+				</button></a>' : '')
+                . '</div>
             ';
         })
 ];
