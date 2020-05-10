@@ -18,12 +18,15 @@ namespace itnt\uiTab;
 
 use Flarum\Extend;
 use Flarum\Frontend\Document;
+use Illuminate\Support\Facades\Auth;
 
 return [
     (new Extend\Frontend('forum'))
         ->css(__DIR__ . '/resources/less/forum.less'),
     (new Extend\Frontend('forum'))
         ->content(function (Document $document) {
+            $userId = $document->payload['session']['userId'];
+
             $document->foot[] = '
             <!-- UI Tab -->
             <div class="mobile-app-icon-bar" id="myDIV">
@@ -41,8 +44,8 @@ return [
 			    	<button class="buttonstyle">
 			    		<i class="fas fa-edit"></i>
 				    	<span class="spanstyle"></span>
-				</button></a>
-				<a href="/settings">
+				</button></a>'.
+                ($userId  ? '<a href="/settings">
 			    	<button class="buttonstyle">
 			    		<i class="fas fa-user-cog"></i>
 				    	<span class="spanstyle"></span>
@@ -51,8 +54,8 @@ return [
 			    	<button class="buttonstyle">
 			    		<i class="fas fa-bell"></i>
 				    	<span class="spanstyle"></span>
-				</button></a>
-		    </div>
+				</button></a>' : '').
+                '</div>
             ';
         })
 ];
