@@ -28,7 +28,7 @@ return [
 
             $document->foot[] = '
 			<!-- UI Tab -->
-			<div style="height:48px;"></div>
+			<div class="foureightheight"></div>
             <div class="mobile-app-icon-bar" id="myDIV">
             		<a href="/">
 			    	<button class="buttonstyle">
