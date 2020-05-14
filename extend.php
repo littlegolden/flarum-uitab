@@ -27,7 +27,8 @@ return [
             $userId = $document->payload['session']['userId'];
 
             $document->foot[] = '
-            <!-- UI Tab -->
+			<!-- UI Tab -->
+			<div style="height:48px;"></div>
             <div class="mobile-app-icon-bar" id="myDIV">
             		<a href="/">
 			    	<button class="buttonstyle">
