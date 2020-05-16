@@ -26,8 +26,8 @@ export default class UitabSettingsModal extends SettingsModal {
         <input required className="FormControl" type="text" placeholder="/composer" bidi={this.setting('itnt-uitab.create_page','\/composer')}/>
         <label>{app.translator.trans(localePrefix + 'settings_page_label')}</label>
         <input required className="FormControl" type="text" placeholder="/settings" bidi={this.setting('itnt-uitab.settings_page','\/settings')}/>
-        <label>{app.translator.trans(localePrefix + 'notification_page_label')}</label>
-        <input required className="FormControl" type="text" placeholder="/notifications" bidi={this.setting('itnt-uitab.notification_page','\/notifications')}/>
+        <label>{app.translator.trans(localePrefix + 'notifications_page_label')}</label>
+        <input required className="FormControl" type="text" placeholder="/notifications" bidi={this.setting('itnt-uitab.notifications_page','\/notifications')}/>
       </div>
     ];
   }

@@ -33,7 +33,7 @@ export default class ItntUitab extends Component {
                 <div id="ItntUitab">
                     <div class="foureightheight"></div>
                     <div class="mobile-app-icon-bar" id="myDIV">
-                        <a href={app.forum.attribute('itnt-uitab.home_page')}>
+                        <a href={uitabHome}>
                             <button class="buttonstyle"><i class="fa fa-home"></i><span class="spanstyle"></span></button>
                         </a>
                         <a href={uitabTags}>
