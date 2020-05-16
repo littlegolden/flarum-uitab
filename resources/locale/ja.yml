@@ -1,0 +1,11 @@
+itnt-uitab:
+  admin:
+    settings:
+      title: UI Tab 設定
+      tags_title: サブディレクトリの定義
+      help_text: "Fraramがサブディレクトリにインストールされている場合は、以下のリンクの前にサブディレクトリのURLを追加してください。e.g. <code>/ → /bbs</code>, <code>/tags → /bbs/tags</code>"
+      home_page_label: ホーム
+      tags_page_label: タグ
+      create_page_label: スレッド
+      settings_page_label: 設定
+      notification_page_label: 通知

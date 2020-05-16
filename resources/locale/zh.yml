@@ -1,0 +1,11 @@
+itnt-uitab:
+  admin:
+    settings:
+      title: 底部导航栏设置
+      tags_title: 设置子目录链接
+      help_text: "如果您的论坛置于子目录中，请给下方链接加上子目录前缀。例如首页如果是 <code>/bbs</code>，则标签页应改为 <code>/bbs/tags</code>"
+      home_page_label: 首页
+      tags_page_label: 标签页
+      create_page_label: 发布页
+      settings_page_label: 设置页
+      notification_page_label: 通知页

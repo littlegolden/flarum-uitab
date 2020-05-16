@@ -14,48 +14,24 @@
  * @link       https://github.com/littlegolden/flarum-uitab
  */
 
-namespace itnt\uiTab;
+namespace ITNT\UITab;
 
 use Flarum\Extend;
-use Flarum\Frontend\Document;
+use Illuminate\Contracts\Events\Dispatcher;
+use ITNT\UITab\Listeners\LoadSettingsFromDatabase;
 
 return [
-    (new Extend\Frontend('forum'))
-        ->css(__DIR__ . '/resources/less/forum.less'),
-    (new Extend\Frontend('forum'))
-        ->content(function (Document $document) {
-            $userId = $document->payload['session']['userId'];
+	(new Extend\Frontend('admin'))
+        ->js(__DIR__.'/js/dist/admin.js')
+		->css(__DIR__ . '/resources/less/admin.less'),
 
-            $document->foot[] = '
-			<!-- UI Tab -->
-			<div class="foureightheight"></div>
-            <div class="mobile-app-icon-bar" id="myDIV">
-            		<a href="/">
-			    	<button class="buttonstyle">
-			    		<i class="fa fa-home"></i>
-					<span class="spanstyle"></span>
-				</button></a>
-				<a href="/tags">
-			    	<button class="buttonstyle">
-			    		<i class="fas fa-tags"></i>
-				    	<span class="spanstyle"></span>
-				</button></a>
-				<a href="/composer">
-			    	<button class="buttonstyle">
-			    		<i class="fas fa-edit"></i>
-				    	<span class="spanstyle"></span>
-				</button></a>'
-                . ($userId  ? '<a href="/settings">
-			    	<button class="buttonstyle">
-			    		<i class="fas fa-user-cog"></i>
-				    	<span class="spanstyle"></span>
-				</button></a>
-				<a href="/notifications">
-			    	<button class="buttonstyle">
-			    		<i class="fas fa-bell"></i>
-				    	<span class="spanstyle"></span>
-				</button></a>' : '')
-                . '</div>
-            ';
-        })
+	(new Extend\Frontend('forum'))
+		->js(__DIR__.'/js/dist/forum.js')
+        ->css(__DIR__ . '/resources/less/forum.less'),
+
+	new Extend\Locales(__DIR__ . '/resources/locale'),
+
+	function (Dispatcher $events) {
+        $events->subscribe(Listeners\LoadSettingsFromDatabase::class);
+    }
 ];
