@@ -16,8 +16,9 @@ export default class UitabSettingsModal extends SettingsModal {
   form() {
     return [
       <div className="Form-group">
+        <div className="helpText"><i className="uitabSettingsIcon fas fa-exclamation-circle"></i><span>{app.translator.trans(localePrefix + 'requirement')}</span></div>
         <h3>{app.translator.trans(localePrefix + 'tags_title')}</h3>
-        <div className="helptext">{app.translator.trans(localePrefix + 'help_text')}</div>
+        <div className="helpText">{app.translator.trans(localePrefix + 'help_text')}</div>
         <label>{app.translator.trans(localePrefix + 'home_page_label')}</label>
         <input required className="FormControl" type="text" placeholder="/" bidi={this.setting('itnt-uitab.home_page','\/')}/>
         <label>{app.translator.trans(localePrefix + 'tags_page_label')}</label>
