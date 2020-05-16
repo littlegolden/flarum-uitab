@@ -7,11 +7,11 @@ Flarum extension. Add a bottom tab to flarum on mobile.
 
 ### Requirement
   - Flarum v0.1.0-beta.11 or later
+  - Flagrow Direct Links v0.2.0+
 
 ### Installation / Update
 ```
 composer require itnt/flarum-uitab
-
 ```
 
 ### Remove
@@ -19,18 +19,8 @@ composer require itnt/flarum-uitab
 composer remove itnt/flarum-uitab
 ```
 
-### Cache cleaning
-```
-php flarum cache:clear
-```
-
-
 ### Demo
   - https://bbs.csur.fun
-
-### Report Issue
-  - [Github](https://github.com/Littlegolden/flarum-uitab/issues)
-  - [bbs.csur.fun](https://bbs.csur.fun/t/chatroom)
 
 ### Links
   - [Flarum](https://discuss.flarum.org/d/)

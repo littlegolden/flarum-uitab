@@ -24,6 +24,11 @@
     "flarum/core": "^0.1.0-beta.10",
     "flagrow/direct-links": "^0.2.0"
   },
+  "autoload": {
+    "psr-4": {
+        "ITNT\\UITab\\": "src/"
+    }
+  },
   "extra": {
     "flarum-extension": {
       "title": "UI Tab ",
