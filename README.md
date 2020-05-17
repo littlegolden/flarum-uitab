@@ -21,6 +21,7 @@ composer remove itnt/flarum-uitab
 
 ### Demo
   - https://bbs.csur.fun
+  - https://FAQ.ma
 
 ### Links
   - [Flarum](https://discuss.flarum.org/d/)
