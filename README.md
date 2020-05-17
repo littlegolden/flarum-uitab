@@ -27,6 +27,7 @@ php flarum cache:clear
 
 ### Demo
   - https://bbs.csur.fun
+  - https://FAQ.ma
 
 ### Report Issue
   - [Github](https://github.com/Littlegolden/flarum-uitab/issues)
