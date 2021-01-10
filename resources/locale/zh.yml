@@ -1,4 +1,5 @@
 itnt-uitab:
   admin:
-    help_text: "如果您的论坛置于子目录中，请在下方指定子目录，否则请保持默认值。"
+    settings:
+      help_text: "如果您的论坛置于子目录中，请在下方指定子目录，否则请保持默认值。"
       home_page_label: 子目录

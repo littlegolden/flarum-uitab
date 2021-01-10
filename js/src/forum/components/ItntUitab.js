@@ -8,19 +8,19 @@ export default class ItntUitab extends Component {
         super.oninit(vnode);
     }
     view() {
-
+        const uitabHome = app.forum.attribute('itnt-uitab.home_page');
         if (typeof app.session.user === 'undefined') {
             return (
                 <div id="ItntUitab">
                     <div class="foureightheight"></div>
                     <div class="mobile-app-icon-bar" id="myDIV">
-                        <a href={app.forum.attribute('itnt-uitab.home_page')}>
+                        <a href={uitabHome}>
                             <button class="buttonstyle"><i class="fa fa-home"></i><span class="spanstyle"></span></button>
                         </a>
                         <a onclick={() => (this.newDiscussionAction().catch(() => {}))}>
                             <button class="buttonstyle"><i class="fas fa-edit"></i><span class="spanstyle"></span></button>
                         </a>
-                        <a href={uitabHome + '/tags'}>
+                        <a href={uitabHome + 'tags'}>
                             <button class="buttonstyle"><i class="fas fa-tags"></i><span class="spanstyle"></span></button>
                         </a>
                     </div>
@@ -31,19 +31,19 @@ export default class ItntUitab extends Component {
                 <div id="ItntUitab">
                     <div class="foureightheight"></div>
                     <div class="mobile-app-icon-bar" id="myDIV">
-                        <a href={app.forum.attribute('itnt-uitab.home_page')}>
+                        <a href={uitabHome}>
                             <button class="buttonstyle"><i class="fa fa-home"></i><span class="spanstyle"></span></button>
                         </a>
-                        <a href={uitabHome + '/tags'}>
+                        <a href={uitabHome + 'tags'}>
                             <button class="buttonstyle"><i class="fas fa-tags"></i><span class="spanstyle"></span></button>
                         </a>
                         <a onclick={() => (this.newDiscussionAction().catch(() => {}))}>
                             <button class="buttonstyle"><i class="fas fa-edit"></i><span class="spanstyle"></span></button>
                         </a>
-                        <a href={uitabHome + '/settings'}>
+                        <a href={uitabHome + 'settings'}>
                             <button class="buttonstyle"><i class="fas fa-user-cog"></i><span class="spanstyle"></span></button>
                         </a>
-                        <a href={uitabHome + '/notifications'}>
+                        <a href={uitabHome + 'notifications'}>
                             <button class="buttonstyle"><i class="fas fa-bell"></i><span class="spanstyle"></span></button>
                         </a>
                     </div>

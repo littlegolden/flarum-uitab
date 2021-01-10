@@ -11,7 +11,7 @@ return [
         $settings = app(SettingsRepositoryInterface::class);
 
         foreach ([
-                    'composer_page',
+                    'create_page',
                     'home_page',
                     'tags_page',
                     'settings_page',

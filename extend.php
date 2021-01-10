@@ -10,7 +10,7 @@
  * @package    itnt/flarum-uitab
  * @author     Golden <littlegoldenjin@gmail.com>
  * @copyright  2020
- * @license    The MIT License
+ * @license    MIT
  * @link       https://github.com/littlegolden/flarum-uitab
  */
 
@@ -22,8 +22,7 @@ use ITNT\UITab\Listeners\LoadSettingsFromDatabase;
 
 return [
 	(new Extend\Frontend('admin'))
-        ->js(__DIR__.'/js/dist/admin.js')
-		->css(__DIR__ . '/resources/less/admin.less'),
+        ->js(__DIR__.'/js/dist/admin.js'),
 
 	(new Extend\Frontend('forum'))
 		->js(__DIR__.'/js/dist/forum.js')
