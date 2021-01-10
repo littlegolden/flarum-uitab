@@ -1,12 +1,5 @@
 itnt-uitab:
   admin:
     settings:
-      requirement: この拡張機能は、<code>flagrow/direct-links</code>を有効にした後にのみ使用できます。本扩展需要开启后方可使用。
-      title: UI Tab 設定
-      tags_title: サブディレクトリの定義
-      help_text: "Fraramがサブディレクトリにインストールされている場合は、以下のリンクの前にサブディレクトリのURLを追加してください。それ以外の場合は、デフォルト値を保持して保存します。e.g. <code>/ → /bbs</code>, <code>/tags → /bbs/tags</code>"
-      home_page_label: ホーム
-      tags_page_label: タグ
-      create_page_label: スレッド
-      settings_page_label: 設定
-      notifications_page_label: 通知
+      help_text: "フォーラムがサブディレクトリに配置されている場合は、以下のサブディレクトリを指定してください。"
+      home_page_label: サブディレクトリ

@@ -7,6 +7,6 @@ app.initializers.add('itnt-uitab', () => {
     extend(Application.prototype, 'mount', () => {
         const footer = document.createElement('div');
 
-        m.mount(document.body.appendChild(footer), ItntUitab.component());
+        m.mount(document.body.appendChild(footer), ItntUitab);
     });
 });

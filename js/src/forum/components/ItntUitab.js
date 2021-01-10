@@ -1,14 +1,13 @@
 import app from 'flarum/app';
 import Component from 'flarum/Component';
+import DiscussionComposer from 'flarum/components/DiscussionComposer';
+import LogInModal from 'flarum/components/LogInModal';
 
 export default class ItntUitab extends Component {
-
+    oninit(vnode) {
+        super.oninit(vnode);
+    }
     view() {
-        const uitabHome = app.forum.attribute('itnt-uitab.home_page');
-        const uitabTags = app.forum.attribute('itnt-uitab.tags_page');
-        const uitabCreate = app.forum.attribute('itnt-uitab.create_page');
-        const uitabSettings = app.forum.attribute('itnt-uitab.settings_page');
-        const uitabNotifications = app.forum.attribute('itnt-uitab.notifications_page');
 
         if (typeof app.session.user === 'undefined') {
             return (
@@ -18,41 +17,53 @@ export default class ItntUitab extends Component {
                         <a href={app.forum.attribute('itnt-uitab.home_page')}>
                             <button class="buttonstyle"><i class="fa fa-home"></i><span class="spanstyle"></span></button>
                         </a>
-                        <a href={app.forum.attribute('itnt-uitab.create_page')}>
+                        <a onclick={() => (this.newDiscussionAction().catch(() => {}))}>
                             <button class="buttonstyle"><i class="fas fa-edit"></i><span class="spanstyle"></span></button>
                         </a>
-                        <a href={app.forum.attribute('itnt-uitab.tags_page')}>
+                        <a href={uitabHome + '/tags'}>
                             <button class="buttonstyle"><i class="fas fa-tags"></i><span class="spanstyle"></span></button>
                         </a>
                     </div>
                 </div>
             );
-    
         }else{
             return (
                 <div id="ItntUitab">
                     <div class="foureightheight"></div>
                     <div class="mobile-app-icon-bar" id="myDIV">
-                        <a href={uitabHome}>
+                        <a href={app.forum.attribute('itnt-uitab.home_page')}>
                             <button class="buttonstyle"><i class="fa fa-home"></i><span class="spanstyle"></span></button>
                         </a>
-                        <a href={uitabTags}>
+                        <a href={uitabHome + '/tags'}>
                             <button class="buttonstyle"><i class="fas fa-tags"></i><span class="spanstyle"></span></button>
                         </a>
-                        <a href={uitabCreate}>
+                        <a onclick={() => (this.newDiscussionAction().catch(() => {}))}>
                             <button class="buttonstyle"><i class="fas fa-edit"></i><span class="spanstyle"></span></button>
                         </a>
-                        <a href={uitabSettings}>
+                        <a href={uitabHome + '/settings'}>
                             <button class="buttonstyle"><i class="fas fa-user-cog"></i><span class="spanstyle"></span></button>
                         </a>
-                        <a href={uitabNotifications}>
+                        <a href={uitabHome + '/notifications'}>
                             <button class="buttonstyle"><i class="fas fa-bell"></i><span class="spanstyle"></span></button>
                         </a>
                     </div>
                 </div>
             );
-    
         }
 
     }
+    newDiscussionAction() {
+        return new Promise((resolve, reject) => {
+          if (app.session.user) {
+            app.composer.load(DiscussionComposer, { user: app.session.user });
+            app.composer.show();
+    
+            return resolve(app.composer);
+          } else {
+            app.modal.show(LogInModal);
+    
+            return reject();
+          }
+        });
+      }
 }
