@@ -1,7 +1,3 @@
-# Archived, please see [FFans/uitab](https://github.com/FFans/flarum-uitab)
-
----
-
 ## Flarum UI Tab Extension
 Flarum extension. Add a bottom tab to flarum on mobile.
 
