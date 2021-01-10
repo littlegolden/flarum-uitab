@@ -1,3 +1,7 @@
+# Archived, please see [FFans/uitab](https://github.com/FFans/flarum-uitab)
+
+---
+
 ## Flarum UI Tab Extension
 Flarum extension. Add a bottom tab to flarum on mobile.
 
@@ -6,7 +10,7 @@ Flarum extension. Add a bottom tab to flarum on mobile.
 - Custom icons and quantities
 
 ### Requirement
-  - Flarum v0.1.0-beta.11 or later
+  - Flarum v0.1.0-beta.11 - beta.13
   - Flagrow Direct Links v0.2.0+
 
 ### Installation / Update
@@ -33,3 +37,4 @@ composer remove itnt/flarum-uitab
 Buy me a cup of coffee \^_\^
 
   - [Donate](https://pay.csur.fun)
+..
