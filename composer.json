@@ -27,8 +27,7 @@
     }
   ],
   "require": {
-    "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.16",
-    "zerosonesfun/direct-links": "^2.0"
+    "flarum/core": ">=0.1.0-beta.16 <0.1.0-beta.17"
   },
   "autoload": {
     "psr-4": {

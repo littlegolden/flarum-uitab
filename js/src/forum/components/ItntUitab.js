@@ -1,14 +1,14 @@
-import app from 'flarum/app';
-import Component from 'flarum/Component';
-import DiscussionComposer from 'flarum/components/DiscussionComposer';
-import LogInModal from 'flarum/components/LogInModal';
+import app from 'flarum/common/app';
+import Component from 'flarum/common/Component';
+import DiscussionComposer from 'flarum/forum/components/DiscussionComposer';
+import LogInModal from 'flarum/forum/components/LogInModal';
 
 export default class ItntUitab extends Component {
     oninit(vnode) {
         super.oninit(vnode);
     }
     view() {
-        const uitabHome = app.forum.attribute('itnt-uitab.home_page');
+        const uitabHome = app.forum.attribute('home_page');
         if (typeof app.session.user === 'undefined') {
             return (
                 <div id="ItntUitab">

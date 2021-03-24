@@ -1,5 +1,5 @@
-import { extend } from 'flarum/extend';
-import Application from 'flarum/Application';
+import { extend } from 'flarum/common/extend';
+import Application from 'flarum/common/Application';
 
 import ItntUitab from './components/ItntUitab';
 
