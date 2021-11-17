@@ -35,4 +35,9 @@ return [
 
 	(new Extend\Settings())
         ->serializeToForum('home_page', 'itnt-uitab.home_page')
+        ->serializeToForum('discussions_icon', 'itnt-uitab.discussions_icon')
+        ->serializeToForum('tags_icon', 'itnt-uitab.tags_icon')
+        ->serializeToForum('composer_icon', 'itnt-uitab.composer_icon')
+        ->serializeToForum('settings_icon', 'itnt-uitab.settings_icon')
+        ->serializeToForum('notifications_icon', 'itnt-uitab.notifications_icon')
 ];
