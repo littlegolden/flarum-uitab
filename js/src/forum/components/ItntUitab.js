@@ -2,6 +2,7 @@ import app from 'flarum/common/app';
 import Component from 'flarum/common/Component';
 import DiscussionComposer from 'flarum/forum/components/DiscussionComposer';
 import LogInModal from 'flarum/forum/components/LogInModal';
+import Link from 'flarum/forum/components/Link';
 
 export default class ItntUitab extends Component {
     oninit(vnode) {
@@ -14,38 +15,38 @@ export default class ItntUitab extends Component {
                 <div id="ItntUitab">
                     <div class="foureightheight"></div>
                     <div class="mobile-app-icon-bar" id="myDIV">
-                        <a href={uitabHome}>
+                        <Link href={uitabHome}>
                             <button class="buttonstyle"><i class="fa fa-home"></i><span class="spanstyle"></span></button>
-                        </a>
-                        <a onclick={() => (this.newDiscussionAction().catch(() => {}))}>
+                        </Link>
+                        <Link onclick={() => (this.newDiscussionAction().catch(() => { }))}>
                             <button class="buttonstyle"><i class="fas fa-edit"></i><span class="spanstyle"></span></button>
-                        </a>
-                        <a href={uitabHome + 'tags'}>
+                        </Link>
+                        <Link href={uitabHome + 'tags'}>
                             <button class="buttonstyle"><i class="fas fa-tags"></i><span class="spanstyle"></span></button>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             );
-        }else{
+        } else {
             return (
                 <div id="ItntUitab">
                     <div class="foureightheight"></div>
                     <div class="mobile-app-icon-bar" id="myDIV">
-                        <a href={uitabHome}>
+                        <Link href={uitabHome}>
                             <button class="buttonstyle"><i class="fa fa-home"></i><span class="spanstyle"></span></button>
-                        </a>
-                        <a href={uitabHome + 'tags'}>
+                        </Link>
+                        <Link href={uitabHome + 'tags'}>
                             <button class="buttonstyle"><i class="fas fa-tags"></i><span class="spanstyle"></span></button>
-                        </a>
-                        <a onclick={() => (this.newDiscussionAction().catch(() => {}))}>
+                        </Link>
+                        <Link onclick={() => (this.newDiscussionAction().catch(() => { }))}>
                             <button class="buttonstyle"><i class="fas fa-edit"></i><span class="spanstyle"></span></button>
-                        </a>
-                        <a href={uitabHome + 'settings'}>
+                        </Link>
+                        <Link href={uitabHome + 'settings'}>
                             <button class="buttonstyle"><i class="fas fa-user-cog"></i><span class="spanstyle"></span></button>
-                        </a>
-                        <a href={uitabHome + 'notifications'}>
+                        </Link>
+                        <Link href={uitabHome + 'notifications'}>
                             <button class="buttonstyle"><i class="fas fa-bell"></i><span class="spanstyle"></span></button>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             );
@@ -54,16 +55,16 @@ export default class ItntUitab extends Component {
     }
     newDiscussionAction() {
         return new Promise((resolve, reject) => {
-          if (app.session.user) {
-            app.composer.load(DiscussionComposer, { user: app.session.user });
-            app.composer.show();
-    
-            return resolve(app.composer);
-          } else {
-            app.modal.show(LogInModal);
-    
-            return reject();
-          }
+            if (app.session.user) {
+                app.composer.load(DiscussionComposer, { user: app.session.user });
+                app.composer.show();
+
+                return resolve(app.composer);
+            } else {
+                app.modal.show(LogInModal);
+
+                return reject();
+            }
         });
-      }
+    }
 }
